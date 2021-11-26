@@ -61,7 +61,9 @@ Grails version: 3.3.11
 Para mais informações acesse a documentação oficial <a href="http://docs.grails.org/3.3.11/guide/single.html#gettingStarted">clicando aqui</a>.
 
 # Definições do projeto
-Criar um sistema WEB para gestão de Vendas, utilizando exclusivamente o framework Grails e salvando os registros em um banco de dados Postgres.
+Criar um sistema WEB para gestão de Vendas, utilizando o framework Grails e salvando os registros em um banco de dados Postgres. 
+
+Nos próximos itens serão apresentados alguns diagramas para ajudar no entendimento do projeto. Os diagramas foram desenvolvidos utilizando a ferraments <a herf="https://staruml.io/">StartUML</a>. Uma <a href="https://github.com/alisonweber/grails_start/blob/01959c20fd48eb34e522ff3eab7e3b9c5b477a0f/ModeloStarUML.mdj">cópia do modelo</a> esta presente neste projeto.
 
 ### Use Case Diagram
 O diagrama abaixo apresenta o usuário do sistema (também conhecidos como ator) e as interações dele com o sistema. Nele poderá ver os cenários que devem ser desenvolvidos e o escopo geral do sistema.
@@ -71,55 +73,53 @@ O diagrama abaixo apresenta o usuário do sistema (também conhecidos como ator)
 ### Class Diagram
 O diagrama abaixo ilustra os modelos de dados para o sistema a ser desenvolvido, apresentando uma visão geral dos esquemas e necessidades da aplicação.
 
-![image](https://user-images.githubusercontent.com/34774584/143625351-7bda1f0e-3e73-4218-b3d7-afa65fbacfa3.png)
+![image](https://user-images.githubusercontent.com/34774584/143627093-eef14618-4a28-4278-ac60-55fd07f299ce.png)
 
+### Regras para os Modelos
+	Usuário
+	- nome: obrigatório, tamanho máximo de 255
+	- usuario: obrigatório, tamanho máximo de 50 //Atributo utilizado para realizar o login no sitema
+	- senha: obrigatório, tamanho máximo de 50, deve possuir letras e números
 
+	Produto
+	- nome: obrigatório, tamanho máximo de 255
+	- valorPadrao: facultativo //Atributo utilizado para carregar o valor padrão do produto durante a digitação de uma Venda
+	
+	Cliente
+	- nome: obrigatório, tamanho máximo de 255
+	- cpfCnpj: obrigatório, validar se preenchimento é de tamanho 11 ou 14 digitos compostos apenas de números;
+	- email: facultivo, validar se é e-mail valido;
+	
+	Venda
+	- cliente: obrigatório
+	- valorTotal: obrigatório, maior que 0.00 //somatório de todos os itens da venda
+	- itensVenda: obrigatóroo, deve possuir ao menos 1 item
+	
+	VendaItem
+	- produto: obrigatório
+	- valorUnitario: obrigatório //carregar automaticamente ao selecionar um produto cadastrado do atributo valorPadrao
+	- quantidade: obrigatório, maior que 0.00
+	- desconto: facultativo
+	- valorTotalItem: obrigatóroo, maior que 0.00 // valorTotalItem = (valorUnitario * quantidade) - desconto
+	
+## Criando o projeto
 
+[FAZER] Explicar como criar um projeto.
 
-Pastas
+### Primeiro CRUD
 
-Mapping
+[FAZER] Explicar a criação do primeiro domínio.
 
--Filter
+### CRUD de Exemplo
 
---Dominio
---	seguence
---	mapping
--		delete-all-orphan
--	constrintins
-- Controller
-- 	insert
--	update
--	delete
-	list
+[FAZER] Explicar o que foi feito.
 
--views
-	-list
-	-crete
-	-edit
-	-form
-		-hasError
-		-required
-		-mascarasNumeros
-		-javascript(NUNCA NO MEIO DO CÓDIGO)
-		-resorces(assets)
-		-bootstrap columns, sempre ter
-		-padrão de botões e labels
-		-type dos botões
-		-ajaxpost
-		autocomplete
-		datatable
-    
-    
-    
-Apresentação
-
-    Código
-    Explicação da solução (em arquivo separado em Markdown/Plain Text)
-
-# Avaliação
-
-# Para nos enviar seu código, você pode:
+## Para nos enviar seu código, você pode:
 
 - Fazer um fork desse repositório, e nos mandar uma pull-request.
 - Dar acesso ao seu repositório privado no Gitlab para o usuário <definir>.
+	
+### Avaliação
+	
+- Iremos verificar o código do projeto e como foi solucionado. Não hesite em nos surpreender positivamente.
+- Gostariamos de uma explicação da solução e do aprendizado que teve. Poderá ser oral ou em arquivo de texto separado em Markdown/Plain Text.
