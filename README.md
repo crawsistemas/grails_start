@@ -105,18 +105,24 @@ O diagrama abaixo ilustra os modelos de dados para o sistema a ser desenvolvido,
 ## Criando o projeto
 
 [FAZER] Explicar como criar um projeto.
+[FAZER] Copiar pasta de templates para gerar nosso padrão
 
 ### Primeiro CRUD
 
-[FAZER] Explicar a criação do primeiro domínio.
+[FAZER] Explicar a criação do primeiro domínio PADRÃO.
 
 ### CRUD de Exemplo
 
 [FAZER] Explicar o que foi feito.
 
+# AGORA É COM VOCÊ
+
+[FAZER] Realize um fork do projeto.
+[FAZER] Suporte ou ajuda como fazer.
+
 ## Para nos enviar seu código, você pode:
 
-- Fazer um fork desse repositório, e nos mandar uma pull-request.
+- Mandar uma pull-request com o fork desse repositório.
 - Dar acesso ao seu repositório privado no Gitlab para o usuário <definir>.
 	
 ### Avaliação
