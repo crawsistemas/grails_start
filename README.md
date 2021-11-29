@@ -104,8 +104,55 @@ O diagrama abaixo ilustra os modelos de dados para o sistema a ser desenvolvido,
 	
 ## Criando o projeto
 
-[FAZER] Explicar como criar um projeto.
-[FAZER] Copiar pasta de templates para gerar nosso padrão
+Para criar um novo projeto ou executar qualquer comando utilizando o framework é necessário conhecer o comando `grails`. Com este comando é possível criar aplicações, executar o projeto, criar controladores, criar domínios, etc.
+```
+grails <<command name>>
+```
+Executando o comando `create-app` uma nova aplicação será criada na pasta onde o comando foi executado, com toda estruturação do framework ponta para execução.
+```
+grails create-app gestao_vendas
+```
+Logo após o comando esta presente o nome da aplicação "gestao_vendas". É importante que este nome não possua caracteres especiais ou espaço.
+
+#### O que temos no projeto e quais são as pastas:
+Para conseguir desempenhar um bom trabalho no framework, você precisa se familiarizar com a estrutura de diretórios fornecida pelo Grails. Aqui está uma análise e links para as seções relevantes:
+- gestao_vendas - Raiz do projeto
+	- gradle - Sistema de compilação, diretório padrão/automático criado
+	- grails-app - Diretório de nível superior para fontes Groovy
+		- <a href="https://gsp.grails.org/latest/guide/resources.html">assets</a> - Local de recursos como CSS, JavaScript e imagens
+		- <a href="http://docs.grails.org/3.3.11/guide/conf.html">conf</a> - Fontes de configuração
+		- <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#controllers">controllers</a>- Controladores da Web - O C em MVC
+		- <a href="http://docs.grails.org/3.3.11/guide/GORM.html">domain</a>- O domínio do aplicativo. - O M em MVC
+		- <a href="http://docs.grails.org/3.3.11/guide/i18n.html">i18n</a>- Suporte para internacionalização (i18n)
+		- services- A camada de serviço (NÃO SERÁ UTILIZADA)
+		- <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#taglibs">taglib</a>- Bibliotecas de tags
+		- utils - Utilitários específicos do Grails
+		- views - <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#gsp">Groovy Server Pages</a> ou <a href="http://views.grails.org/latest">JSON Views</a> (HTML + Tags Grails) - The V em MVC
+	- src/main/groovy - Fontes de apoio
+	- src/test/groovy - Testes de unidade e integração
+
+Se deseja executar sua aplicação, execute na pasta do projeto:
+```
+grails run-app
+```
+Isso iniciará um servidor integrado na porta 8080 que hospeda seu aplicativo. Conseguirá acessar seu aplicativo na URL:
+```
+http://localhost:8080/
+```
+
+#### Existe uma IDE?
+Não existe uma IDE oficial para Grails, mas existem vários editores de texto excelentes que funcionam bem com Groovy e Grails. Veja abaixo alguns: 
+- Visual Studio Code (Utilizado por nós) - Plugins disponíveis para imporação.
+- NetBeans - Plugin grails disponível e muito útil quando o projeto possui combinção com códigos Java.
+- IntelliJ IDEA - Versão gratuita com menos recursos e uma versão paga completa.
+- Existe um pacote TextMate com suporte Groovy/Grails no Textmate.
+- Um plug-in de texto Sublime pode ser instalado por meio do Controle de pacotes.
+- Um pacote Atom está disponível para uso com o editor.
+
+#### Templates:
+Ao longo da construção deste projeto perceberá que o Grails GERA muito código PRONTO, o que nos dá muita produtividade. Cada versão do framework possui uma estrutura de código diferente e nós utilizamos o padrão encontrado na versão 2.2.5. 
+
+Na raiz deste git, existe uma pasta chamada "templates". Copie ela para a raiz de seu projeto para entender e estudar o padrão que utilizamos.
 
 ### Primeiro CRUD
 
