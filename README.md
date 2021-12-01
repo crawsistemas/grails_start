@@ -149,27 +149,53 @@ Não existe uma IDE oficial para Grails, mas existem vários editores de texto e
 - Um plug-in de texto Sublime pode ser instalado por meio do Controle de pacotes.
 - Um pacote Atom está disponível para uso com o editor.
 
-#### Templates:
-Ao longo da construção deste projeto perceberá que o Grails GERA muito código PRONTO, o que nos dá muita produtividade. Cada versão do framework possui uma estrutura de código diferente e nós utilizamos o padrão encontrado na versão 2.2.5. 
-
-Na raiz deste git, existe uma pasta chamada "templates". Copie ela para a raiz de seu projeto para entender e estudar o padrão que utilizamos.
-
 ### Primeiro CRUD
 
 [FAZER] Explicar a criação do primeiro domínio PADRÃO.
+```
+grails create-domain-class Produto
+```
 
 ### CRUD de Exemplo
 
 [FAZER] Explicar o que foi feito.
+```
+grails generate-all Produto
+```
+
+#### Templates
+Ao longo da construção deste projeto perceberá que o Grails GERA muito código PRONTO, o que nos dá muita produtividade. Cada versão do framework possui uma estrutura de código diferente e nós utilizamos o padrão encontrado na versão 2.2.5. No diretorio `gestao_vendas\src\main\templates` estão os arquivos que são utilizados pelo Grails para gerar os CRUDs a partir dos modelos. Para mais informações acesse: <a href="https://docs.grails.org/latest/ref/Command%20Line/install-templates.html">Grails Templates</a>.
+
+### Banco de dados
+O banco de dados já foi configurado na aplicação de exemplo, basta criar um banco de dados com as seguintes configurações:
+
+- Database name: gestao_vendas_db
+- user: postgres
+- password: pgsql
+
+Procure entender como foi realizado esta configuração, pois ela será muito util. Se precisar alterar os dados da configuração para rodar em seu dispositivo, sem problemas, desde que seja utilizando um banco de dados Postgres.
 
 # AGORA É COM VOCÊ
 
-[FAZER] Realize um fork do projeto.
-[FAZER] Suporte ou ajuda como fazer.
+Realize um fork do projeto. A gestão de Produtos já esta pronta, tome como base para desenvolver o restante.
+
+Objetivo é finalizar este projeto com a sua cara, contendo as mesmas funcionalidades deste finalizado:
+
+- <a href="http://gvexemplo.crawsistemas.com">http://gvexemplo.crawsistemas.com</a>
+- Usuário: vendedor
+- Senha: bonsEstudos123
+
+Se precisar de ajuda, pode entrar em contato conosco utilizando as seguintes opções:
+
+- Utilize o Wiki
+- E-mail: desenvolvimento@crawsistemas.com
 
 ## Para nos enviar seu código, você pode:
 
 - Mandar uma pull-request com o fork desse repositório.
+
+ou
+
 - Dar acesso ao seu repositório privado no Gitlab para o usuário <definir>.
 	
 ### Avaliação
