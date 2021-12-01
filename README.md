@@ -170,6 +170,9 @@ grails generate-all Produto
 ```
 
 #### Templates
+
+[AINDA EM PROCESSO DE CONSTRUÇÃO] 
+
 Ao longo da construção deste projeto perceberá que o Grails GERA muito código PRONTO, o que nos dá muita produtividade. Cada versão do framework possui uma estrutura de código diferente e nós utilizamos o padrão encontrado na versão 2.2.5. No diretorio `gestao_vendas\src\main\templates` estão os arquivos que são utilizados pelo Grails para gerar os CRUDs a partir dos modelos. Para mais informações acesse: <a href="https://docs.grails.org/latest/ref/Command%20Line/install-templates.html">Grails Templates</a>.
 
 ### Banco de dados
@@ -190,7 +193,7 @@ Realize um fork do projeto. A gestão de Produtos já esta pronta, tome como bas
 
 Objetivo é finalizar este projeto com a sua cara, contendo as mesmas funcionalidades deste finalizado:
 
-- <a href="http://gvexemplo.crawsistemas.com">http://gvexemplo.crawsistemas.com</a>
+- <a href="http://gvexemplo.crawsistemas.com">http://gvexemplo.crawsistemas.com</a> [EM BREVE] 
 - Usuário: vendedor
 - Senha: bonsEstudos123
 
