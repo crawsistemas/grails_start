@@ -128,6 +128,7 @@ Para conseguir desempenhar um bom trabalho no framework, você precisa se famili
 		- <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#taglibs">taglib</a>- Bibliotecas de tags
 		- utils - Utilitários específicos do Grails
 		- views - <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#gsp">Groovy Server Pages</a> ou <a href="http://views.grails.org/latest">JSON Views</a> (HTML + Tags Grails) - The V em MVC
+			- <a href="https://gsp.grails.org/latest/guide/index.html#formsAndFields">Forms and Fields</a>
 	- src/main/groovy - Fontes de apoio
 	- src/test/groovy - Testes de unidade e integração
 
