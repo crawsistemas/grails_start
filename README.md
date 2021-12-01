@@ -153,6 +153,8 @@ Não existe uma IDE oficial para Grails, mas existem vários editores de texto e
 
 [** EM PROCESSO DE CONSTRUÇÃO **] 
 
+Uma classe de domínio representa o modelo principal por trás de seu aplicativo e é normalmente mapeada em tabelas de banco de dados. Para obter mais informações sobre modelos de domínio em Grails <a href="https://docs.grails.org/latest/ref/Command%20Line/create-domain-class.html">cliquei aqui</a>.
+
 Explicar a criação do primeiro domínio PADRÃO.
 
 ```
