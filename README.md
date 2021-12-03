@@ -128,7 +128,6 @@ Para conseguir desempenhar um bom trabalho no framework, você precisa se famili
 		- <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#taglibs">taglib</a>- Bibliotecas de tags
 		- utils - Utilitários específicos do Grails
 		- views - <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#gsp">Groovy Server Pages</a> ou <a href="http://views.grails.org/latest">JSON Views</a> (HTML + Tags Grails) - The V em MVC
-			- <a href="https://gsp.grails.org/latest/guide/index.html#formsAndFields">Forms and Fields</a>
 	- src/main/groovy - Fontes de apoio
 	- src/test/groovy - Testes de unidade e integração
 
@@ -152,35 +151,33 @@ Não existe uma IDE oficial para Grails, mas existem vários editores de texto e
 
 ### Primeiro CRUD
 
-[** EM PROCESSO DE CONSTRUÇÃO **] 
-
 Uma classe de domínio representa o modelo principal por trás de seu aplicativo e é normalmente mapeada em tabelas de banco de dados. Para obter mais informações sobre modelos de domínio em Grails <a href="https://docs.grails.org/latest/ref/Command%20Line/create-domain-class.html">cliquei aqui</a>.
 
-Explicar a criação do primeiro domínio PADRÃO.
-
+Para criar uma classe de dominio, digite o comando abaixo, especificando o nome do domínio a ser criado:
 ```
 grails create-domain-class Produto
 ```
+Para mais informações sobre o controle de domínios, acesse <a href="https://docs.grails.org/latest/ref/Domain%20Classes/Usage.html">documentação oficial</a>.
 
 ### CRUD de Exemplo
 
-[** EM PROCESSO DE CONSTRUÇÃO **] 
-
-Explicar o que foi feito.
+A base padrão do framework é o pradão <a href="https://pt.wikipedia.org/wiki/MVC">MVC</a> e todo código pode ser construido manualmente neste padrão. Para otimizar a construção das classes de controladores e telas, podemos executar o seguinte comando:
 
 ```
 grails generate-all Produto
 ```
 
-#### Templates
+Isso irá criar um controlador, telas e um teste de unidade para a classe de domínio fornecida.
 
-[** EM PROCESSO DE CONSTRUÇÃO **] 
+> Templates:
+> 
+> A criação deste código pelo comando `generate-all` é feita utilizando o padrão de templates do grails, que pode ser estilizado. Cada versão do framework possui uma estrutura de código diferente e nós utilizamos o padrão encontrado na versão 2.2.5. No diretorio `gestao_vendas\src\main\templates` estão os arquivos que são utilizados pelo Grails para gerar os CRUDs a partir dos modelos. Para mais informações acesse: <a href="https://docs.grails.org/latest/ref/Command%20Line/install-templates.html">Grails Templates</a>.
 
-Ao longo da construção deste projeto perceberá que o Grails GERA muito código PRONTO, o que nos dá muita produtividade. Cada versão do framework possui uma estrutura de código diferente e nós utilizamos o padrão encontrado na versão 2.2.5. No diretorio `gestao_vendas\src\main\templates` estão os arquivos que são utilizados pelo Grails para gerar os CRUDs a partir dos modelos. Para mais informações acesse: <a href="https://docs.grails.org/latest/ref/Command%20Line/install-templates.html">Grails Templates</a>.
+Estes códigos gerados precisam de ajustes para criar a pesonalização necessária para o projeto, e é aí que o programador vai atuar principalmente, fazendo as modificações para chegar a versão final.
+
+Nas templates de "_form" geradas, perceberá o uso do plugin <a href="https://plugins.grails.org/plugin/grails/fields">Fields</a>. Este plugin não é utilizado por nós, então o conteudo dos forms deve ser substituido por <a href="https://gsp.grails.org/latest/guide/index.html#formsAndFields">Forms and Fields</a> seguindo o exemplo já construido na gestão de produtos.
 
 ### Banco de dados
-
-[** EM PROCESSO DE CONSTRUÇÃO **] 
 
 O banco de dados já foi configurado na aplicação de exemplo, basta criar um banco de dados com as seguintes configurações:
 
