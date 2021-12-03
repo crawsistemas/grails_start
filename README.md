@@ -128,6 +128,7 @@ Para conseguir desempenhar um bom trabalho no framework, você precisa se famili
 		- <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#taglibs">taglib</a>- Bibliotecas de tags
 		- utils - Utilitários específicos do Grails
 		- views - <a href="http://docs.grails.org/3.3.11/guide/theWebLayer.html#gsp">Groovy Server Pages</a> ou <a href="http://views.grails.org/latest">JSON Views</a> (HTML + Tags Grails) - The V em MVC
+			- <a href="https://gsp.grails.org/latest/guide/index.html#formsAndFields">Forms and Fields</a>
 	- src/main/groovy - Fontes de apoio
 	- src/test/groovy - Testes de unidade e integração
 
@@ -151,7 +152,9 @@ Não existe uma IDE oficial para Grails, mas existem vários editores de texto e
 
 ### Primeiro CRUD
 
-[AINDA EM PROCESSO DE CONSTRUÇÃO] 
+[** EM PROCESSO DE CONSTRUÇÃO **] 
+
+Uma classe de domínio representa o modelo principal por trás de seu aplicativo e é normalmente mapeada em tabelas de banco de dados. Para obter mais informações sobre modelos de domínio em Grails <a href="https://docs.grails.org/latest/ref/Command%20Line/create-domain-class.html">cliquei aqui</a>.
 
 Explicar a criação do primeiro domínio PADRÃO.
 
@@ -161,7 +164,7 @@ grails create-domain-class Produto
 
 ### CRUD de Exemplo
 
-[AINDA EM PROCESSO DE CONSTRUÇÃO] 
+[** EM PROCESSO DE CONSTRUÇÃO **] 
 
 Explicar o que foi feito.
 
@@ -170,11 +173,14 @@ grails generate-all Produto
 ```
 
 #### Templates
+
+[** EM PROCESSO DE CONSTRUÇÃO **] 
+
 Ao longo da construção deste projeto perceberá que o Grails GERA muito código PRONTO, o que nos dá muita produtividade. Cada versão do framework possui uma estrutura de código diferente e nós utilizamos o padrão encontrado na versão 2.2.5. No diretorio `gestao_vendas\src\main\templates` estão os arquivos que são utilizados pelo Grails para gerar os CRUDs a partir dos modelos. Para mais informações acesse: <a href="https://docs.grails.org/latest/ref/Command%20Line/install-templates.html">Grails Templates</a>.
 
 ### Banco de dados
 
-[AINDA EM PROCESSO DE CONSTRUÇÃO]
+[** EM PROCESSO DE CONSTRUÇÃO **] 
 
 O banco de dados já foi configurado na aplicação de exemplo, basta criar um banco de dados com as seguintes configurações:
 
@@ -190,7 +196,9 @@ Realize um fork do projeto. A gestão de Produtos já esta pronta, tome como bas
 
 Objetivo é finalizar este projeto com a sua cara, contendo as mesmas funcionalidades deste finalizado:
 
-- <a href="http://gvexemplo.crawsistemas.com">http://gvexemplo.crawsistemas.com</a>
+[** EM PROCESSO DE CONSTRUÇÃO **]
+
+- <a href="http://gvexemplo.crawsistemas.com">http://gvexemplo.crawsistemas.com</a> 
 - Usuário: vendedor
 - Senha: bonsEstudos123
 
