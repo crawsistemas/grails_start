@@ -59,6 +59,9 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:2.47.1"
+
+    //Adicionado a pasta lib manualmente
+    compile fileTree(dir: 'lib', include: '*.jar')
 }
 
 bootRun {
@@ -78,4 +81,33 @@ tasks.withType(Test) {
 assets {
     minifyJs = true
     minifyCss = true
+}
+
+//ADICIONADO MANUALMENTE
+sourceSets {
+    main {
+        java { 
+            srcDirs = [] 
+        } 
+        groovy { 
+            srcDirs += ['src/main/java'] 
+        } 
+    } 
+}
+def defaultEncoding = 'UTF-8'  
+compileJava {  
+    options.encoding = defaultEncoding  // affects *.java under src/main/java  
+                                        // alternative: "file.encoding" property  
+}
+compileTestJava {  
+    options.encoding = defaultEncoding  // affects *.java under src/test/java  
+                                        // alternative: "file.encoding" property  
+}  
+compileGroovy {  
+    groovyOptions.encoding = defaultEncoding  // affects *.groovy under src/main/groovy  
+    options.encoding = defaultEncoding        // affects *.java under src/main/groovy  
+}  
+compileTestGroovy {  
+    groovyOptions.encoding = defaultEncoding  // affects *.groovy under src/test/groovy  
+    options.encoding = defaultEncoding        // affects *.java under src/test/groovy  
 }
