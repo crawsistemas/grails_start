@@ -17,7 +17,7 @@
         <h1>Bem vindo</h1>
 
         <p>
-            Parabéns, você iniciou com sucesso este projeto Grails! Para mais informações acesse: <a href="https://github.com/alisonweber/grails_start.git" target="blank">Projeto GitHub</a>.
+            Parabéns, você iniciou com sucesso este projeto Grails! Para mais informações acesse: <a href="https://github.com/alisonweber/grails_start.git" target="blank">Projeto GitHub</a>. Acesse o menu para gestão dos cadastros.
         </p>
     </section>
 </div>

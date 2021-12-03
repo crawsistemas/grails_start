@@ -35,5 +35,9 @@ gestao_vendas
 				</fieldset>
 			</g:form>
 		</div>
+		
+		<content tag="jsEspecifico">
+			<asset:javascript src="formatacao.js"/>
+		</content>
 	</body>
 </html>

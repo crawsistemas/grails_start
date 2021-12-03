@@ -28,7 +28,10 @@
                                 Ações
                             </th>
                             <th>
-                                <g:message code="produto.id.label" default="id" />
+                                <g:message code="produto.nome.label" default="nome" />
+                            </th>
+                            <th>
+                                <g:message code="produto.valorPadrao.label" default="valorPadrao" />
                             </th>
                         </tr>
                     </thead>
@@ -50,7 +53,10 @@
                             "render": function (data, type, full, meta) { return '<a href="${createLink(controller:'produto', action:'edit')}/'+ data.id +'" >Editar</a>'; }
                         },
                         {
-                            "data": "id"
+                            "data": "nome"
+                        },
+                        {
+                            "data": "valorPadrao"
                         }
                     ],
                     "language": {

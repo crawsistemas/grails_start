@@ -22,7 +22,8 @@ class ProdutoController {
         List dados = Produto.createCriteria().list(params) {
             if (search && !search.equals("")){
                 or {
-                    //INSERIR RESTRIÇÕES DE FILTRO NAS COLUNAS
+                    ilike("nome", "%"+search+"%")
+                    sqlRestriction("to_char(this_.valor_padrao, 'FM999G999G990D00') like ?", [search+"%"])
                 }
             }
             
@@ -36,10 +37,11 @@ class ProdutoController {
         def recordsFiltered = dados.totalCount;
 
         //CODIGO ABAIXO PERMITE A PESONALIZAÇÃO DO RETORNO
-        // dados = dados.collect {it -> return [
-        //     id : it.id,
-        //     nome : it.nome
-        // ]}
+        dados = dados.collect {it -> return [
+            id : it.id,
+            nome : it.nome,
+            valorPadrao : formatNumber(number:it.valorPadrao, format:"###,###,##0.00")
+        ]}
         
         render contentType: "text/json", text: ["draw":params.draw,"recordsTotal":recordsTotal,"recordsFiltered":recordsFiltered,"data": dados ] as JSON;
     }
