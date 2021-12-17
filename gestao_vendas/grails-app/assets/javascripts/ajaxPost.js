@@ -12,7 +12,7 @@ function ajaxPost(element, url, nomeDivUpdate, bloquear, tentativa) {
         divUpdate = $("#"+nomeDivUpdate.replace( /(:|\.|\[|\]|,|=|@)/g, "\\$1" ));
     var divBlock = $( "<div>" ).attr( "id", nomeDivUpdate+"-block" )
         .addClass( "bloqueio-div" )
-        .append( '...' );
+        .append( '<div class="spinner"></div>' );
 
     $.ajax({
         type: "POST",
