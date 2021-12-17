@@ -88,7 +88,7 @@ O diagrama abaixo ilustra os modelos de dados para o sistema a ser desenvolvido,
 	Cliente
 	- nome: obrigatório, tamanho máximo de 255
 	- cpfCnpj: obrigatório, validar se preenchimento é de tamanho 11 ou 14 digitos compostos apenas de números;
-	- email: facultivo, validar se é e-mail valido;
+	- email: facultativo, validar se é e-mail valido;
 	
 	Venda
 	- cliente: obrigatório
