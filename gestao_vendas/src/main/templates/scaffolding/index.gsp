@@ -41,7 +41,7 @@
                 \$('#table-${propertyName}').DataTable( {
                     "processing": true,
                     "serverSide": true,
-                    "ajax": "\${createLink(controller:"produto", action:"listProduto")}",
+                    "ajax": "\${createLink(controller:"${propertyName}", action:"list${className}")}",
                     "columns": [
                         {
                             "orderable": false,
