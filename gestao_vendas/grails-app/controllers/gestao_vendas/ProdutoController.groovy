@@ -119,4 +119,21 @@ class ProdutoController {
             redirect(action: "edit", id: id)
         }
     }
+
+    def carregarValorUltimoProduto(){
+        //le os valores atuais preenchidos na view e preenche um objeto chamado produto
+        def produto = new Produto(params) 
+
+        //Consulta para localizar ultimo produto inserido
+        def ultimoProduto = Produto.createCriteria().get(){
+            order("id", "desc")
+            maxResults(1)
+        }
+        //se encontrar um produto, carrega o valor dele
+        if (ultimoProduto) 
+            produto.valorPadrao = ultimoProduto.valorPadrao
+
+        //renderiza a view com a template atualizada, passando como parametro os valores novos do produto
+        render(template: "valorPadrao", model:[produto: produto])
+    }
 }

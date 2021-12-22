@@ -86,6 +86,7 @@
 <asset:javascript src="popper.min"/>
 
 <asset:javascript src="application.js"/>
+<asset:javascript src="ajaxPost.js"/>
 <g:ifPageProperty name="page.jsEspecifico">
         <g:pageProperty name="page.jsEspecifico"/>
 </g:ifPageProperty>
