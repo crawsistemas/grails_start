@@ -1,1 +1,0 @@
-<f:all bean="venda"/>
