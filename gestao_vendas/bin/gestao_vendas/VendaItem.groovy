@@ -9,7 +9,7 @@ class VendaItem {
     BigDecimal valorTotalItem
     
     //----- RELAÇÕES -----
-    static belongsTo = Venda //NECESSARIO?
+    static belongsTo = Venda
     static haMany = [produto:Produto]
     
     //----- CONTRAINTS -----
