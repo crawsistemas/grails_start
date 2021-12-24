@@ -55,7 +55,7 @@
                             "data": "id"
                         },
                         {
-                            "data": "produto"
+                            "data": "produto.nome"
                         }
                     ],
                     "language": {

@@ -18,7 +18,7 @@ class VendaItem {
         valorUnitario(nullable:false,editable:false)   //PUXA VALOR DO PRODUTO
         quantidade(nullable:false)
         desconto(nullable:true)
-        valorTotalItem(nullable:false, validator:{val, obj-> val>0},editable:false) //SETADO PELO CONTROLLER
+        valorTotalItem(nullable:false, validator:{val, obj-> val>0}) //SETADO PELO CONTROLLER
     }
 
     // ------- SETTERS E GETTERS -------

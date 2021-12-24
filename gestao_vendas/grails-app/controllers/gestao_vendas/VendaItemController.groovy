@@ -122,4 +122,18 @@ class VendaItemController {
             redirect(action: "edit", id: id)
         }
     }
+
+
+    def carregarValorUnitario(){
+        //le os valores atuais (no caso apenas o produto)
+        def vendaItem = new VendaItem(params)
+        render(template: "valorUnitario", model:[vendaItem:vendaItem] )
+    }
+
+    def carregarValorTotal(){
+        //le os valores atuais (no caso apenas o produto)
+        def vendaItem = new VendaItem(params)
+        vendaItem.valorTotalItem = vendaItem.valorUnitario*vendaItem.quantidade - vendaItem.desconto
+        render(template: "valorTotal", model:[vendaItem:vendaItem] )
+    }
 }
