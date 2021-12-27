@@ -21,18 +21,20 @@
                 <div class="message" role="status">\${flash.message}</div>
             </g:if>
             
-            <table id="table-${propertyName}">
-                <thead>
-                    <tr>
-                        <th>
-                            Ações
-                        </th>
-                        <th>
-                            <g:message code="${propertyName}.id.label" default="id" />
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="m-3">
+                <table id="table-${propertyName}">
+                    <thead>
+                        <tr>
+                            <th>
+                                Ações
+                            </th>
+                            <th>
+                                <g:message code="${propertyName}.id.label" default="id" />
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
         </div>
 
         <content tag="jsEspecifico">
