@@ -28,7 +28,7 @@
                             Ações
                         </th>
                         <th>
-                            <g:message code="produto.id.label" default="id" />
+                            <g:message code="${propertyName}.id.label" default="id" />
                         </th>
                     </tr>
                 </thead>
