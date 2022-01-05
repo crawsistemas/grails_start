@@ -130,12 +130,12 @@ class VendaController {
         render(template:"itensVenda", model:[venda:venda])
     }
 
-        def removerItem(int indice){
+    def removerItem(int indice){
         def venda = new Venda(params)
         
         venda.itensVenda.removeAt(indice)
 
-        render(template:"itens", model:[venda:venda])
+        render(template:"itensVenda", model:[venda:venda])
     }
     
 }
