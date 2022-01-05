@@ -7,7 +7,6 @@ class Produto {
     BigDecimal valorPadrao
     
     //----- RELAÇÕES -----
-    static belongsTo = VendaItem
 
     //----- CONTRAINTS -----
     static constraints = {

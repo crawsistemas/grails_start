@@ -10,7 +10,6 @@ class VendaItem {
     
     //----- RELAÇÕES -----
     static belongsTo = Venda
-    static haMany = [produto:Produto]
     
     //----- CONTRAINTS -----
     static constraints = {

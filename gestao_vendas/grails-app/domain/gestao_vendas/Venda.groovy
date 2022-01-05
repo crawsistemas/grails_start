@@ -8,7 +8,6 @@ class Venda {
     BigDecimal valorTotal
 
     // ----- RELAÇÕES -----
-    static belongsTo = Cliente
     static hasMany = [itensVenda:VendaItem]
 
     static constraints = {

@@ -7,7 +7,7 @@ class Cliente {
     String email
 
     //----- RELAÇÕES -----
-    static hasMany = [venda:Venda]
+
 
     //----- CONTRAINTS -----
     static constraints = {
