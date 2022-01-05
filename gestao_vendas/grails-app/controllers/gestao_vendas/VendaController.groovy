@@ -118,4 +118,24 @@ class VendaController {
             redirect(action: "edit", id: id)
         }
     }
+
+    def adicionarItem(){
+        def venda = new Venda(params)
+        
+        if (venda.itensVenda==null)
+            venda.itensVenda = []
+
+        venda.itensVenda.add(new VendaItem())
+
+        render(template:"itensVenda", model:[venda:venda])
+    }
+
+        def removerItem(int indice){
+        def venda = new Venda(params)
+        
+        venda.itensVenda.removeAt(indice)
+
+        render(template:"itens", model:[venda:venda])
+    }
+    
 }
