@@ -13,7 +13,7 @@ class Venda {
     static constraints = {
         cliente(nullable:false)
         valorTotal(validator:{val,obj->val>0},nullable:false)
-        itensVenda(nullable:false, validator:{val,obj->!val.isEmpity()})
+        itensVenda(nullable:false, validator:{val,obj->!val.isEmpty()})
     }
 
 

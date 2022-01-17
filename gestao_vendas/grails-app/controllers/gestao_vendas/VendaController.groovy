@@ -126,7 +126,6 @@ class VendaController {
             venda.itensVenda = []
 
         venda.itensVenda.add(new VendaItem())
-
         render(template:"itensVenda", model:[venda:venda])
     }
 
@@ -134,6 +133,27 @@ class VendaController {
         def venda = new Venda(params)
         
         venda.itensVenda.removeAt(indice)
+        render(template:"itensVenda", model:[venda:venda])   
+    }
+
+    def carregarValores(int indice){
+        def venda = new Venda(params)
+
+        def valorUnitario = venda.itensVenda.get(indice).produto.valorPadrao
+        def quantidade = venda.itensVenda.get(indice).quantidade
+        if(!quantidade) quantidade = 1
+        def desconto = venda.itensVenda.get(indice).desconto
+        if (!desconto) desconto = 0
+        def valorTotalItem = valorUnitario*quantidade - desconto
+        venda.itensVenda.get(indice).valorUnitario = valorUnitario
+        venda.itensVenda.get(indice).quantidade = quantidade
+        venda.itensVenda.get(indice).desconto = desconto
+        venda.itensVenda.get(indice).valorTotalItem = valorTotalItem
+
+        def valorTotal = 0
+        venda.itensVenda.each{valorTotal = valorTotal + it.valorTotalItem}
+        venda.valorTotal = valorTotal
+
 
         render(template:"itensVenda", model:[venda:venda])
     }

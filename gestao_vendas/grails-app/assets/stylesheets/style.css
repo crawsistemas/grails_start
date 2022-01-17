@@ -1,0 +1,29 @@
+.navbar-dark{
+    background-color: #648CCC;
+}
+
+.navbar-dark .navbar-toggler{ 
+    color:black;
+    border-color: rgb(99, 85, 150);
+}
+
+.nav li.dropdown.show ul.dropdown-menu {
+    background-color: #3c6bb6;
+}
+
+.nav li :hover {
+    background-color: #648CCC;
+}
+
+.footer {
+    background: #648CCC;
+}
+
+#login-div{
+    display:inline;
+    width: 30%;
+    margin: 0 35%;
+    border: 2px solid #686868;
+    padding: 10px;
+    border-radius: 10px;
+}

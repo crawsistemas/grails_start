@@ -28,9 +28,6 @@
                             Ações
                         </th>
                         <th>
-                            <g:message code="id" defaul="id" />
-                        </th>
-                        <th>
                             <g:message code="cliente.nome.label" default="Nome" />
                         </th>
                         <th>
@@ -56,9 +53,6 @@
                             "orderable": false,
                             "data": null,
                             "render": function (data, type, full, meta) { return '<a href="${createLink(controller:'cliente', action:'edit')}/'+ data.id +'" >Editar</a>'; }
-                        },
-                        {
-                            "data":"id"
                         },
                         {
                             "data": "nome"

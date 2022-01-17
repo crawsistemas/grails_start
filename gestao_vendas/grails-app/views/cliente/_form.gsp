@@ -18,5 +18,5 @@
     <label for="email" />
         <g:message code="cliente.email.label" default="email" />
     </label>
-        <g:textField name="cliente.email" value="${cliente.email}" />
+        <g:textField name="email" value="${cliente.email}" />
 </div>

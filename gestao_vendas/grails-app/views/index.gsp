@@ -6,19 +6,29 @@
 </head>
 <body>
 
-<div class="svg" role="presentation">
-    <div class="grails-logo-container">
-        <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
-    </div>
-</div>
-
 <div id="content" role="main">
     <section class="row colset-2-its">
         <h1>Bem vindo</h1>
+        
+        <div id="login-div"> 
+            <form >
+                <div class="mb-3">
+                    <label for="usuario-input" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="usuario-input" aria-describedby="emailHelp">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="senha-input" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha-input">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
 
-        <p>
-            Parabéns, você iniciou com sucesso este projeto Grails! Para mais informações acesse: <a href="https://github.com/alisonweber/grails_start.git" target="blank">Projeto GitHub</a>. Acesse o menu para gestão dos cadastros.
-        </p>
+        <div id="">
+        </div>
+
+
     </section>
 </div>
 
