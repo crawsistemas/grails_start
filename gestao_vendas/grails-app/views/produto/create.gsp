@@ -36,8 +36,8 @@ gestao_vendas
 			</g:form>
 		</div>
 		
-		<content tag="jsEspecifico">
+		<%-- <content tag="jsEspecifico">
 			<asset:javascript src="formatacao.js"/>
-		</content>
+		</content> --%>
 	</body>
 </html>

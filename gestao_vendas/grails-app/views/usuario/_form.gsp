@@ -1,3 +1,10 @@
+<div class="fieldcontain ${hasErrors(bean: usuario, field: 'nome', 'error')}">
+    <label for="nome">
+        <g:message code="usuario.nome.label" default="nome" />
+        <span class="required-indicator">*</span>
+    </label>
+    <g:textField name="nome" value="${usuario.nome}" />
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: usuario, field: 'usuario', 'error')}">
     <label for="usuario">
@@ -12,13 +19,6 @@
         <g:message code="usuario.senha.label" default="senha" />
         <span class="required-indicator">*</span>
     </label>
-    <g:textField name="senha" value="${usuario.senha}" />
+    <g:field name="senha" value="${usuario.senha}" type="password" />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: usuario, field: 'nome', 'error')}">
-    <label for="nome">
-        <g:message code="usuario.nome.label" default="nome" />
-        <span class="required-indicator">*</span>
-    </label>
-    <g:textField name="nome" value="${usuario.nome}" />
-</div>

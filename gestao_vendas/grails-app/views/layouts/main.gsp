@@ -28,7 +28,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
+        <div class="collapse navbar-collapse" aria-expanded="false" id="navbarContent">
             <ul class="nav navbar-nav ml-auto">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
@@ -41,7 +41,17 @@
                     </ul>
             </ul>
         </div>
-
+        
+        <div id="loginHeader">
+            <g:if test="${session.user}">
+                <p>Olá ${session.user.nome}, 
+                <g:link controller="usuario" action="logout" class="btn btn-secondary">
+                Logout
+                </g:link>?</p>
+            </g:if>
+        </div>
+        
+    
     </nav>
 
     <g:layoutBody/>
@@ -58,9 +68,10 @@
     <asset:javascript src="jquery-3.3.1.min.js"/>
     <asset:javascript src="bootstrap.js"/>
     <asset:javascript src="popper.min"/>
-
+    
     <asset:javascript src="application.js"/>
     <asset:javascript src="ajaxPost.js"/>
+    <asset:javascript src="formatacao.js"/>
     <g:ifPageProperty name="page.jsEspecifico">
             <g:pageProperty name="page.jsEspecifico"/>
     </g:ifPageProperty>

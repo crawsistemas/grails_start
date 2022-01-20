@@ -3,21 +3,21 @@ package gestao_vendas
 class VendaItem {
     //----- ATRIBUTOS -----
     Produto  produto
-    BigDecimal valorUnitario
-    BigDecimal quantidade
-    BigDecimal desconto
-    BigDecimal valorTotalItem
+    BigDecimal valorUnitario = 0
+    BigDecimal quantidade = 1
+    BigDecimal desconto = 0
+    BigDecimal valorTotalItem = 0
     
     //----- RELAÇÕES -----
     static belongsTo = Venda
     
     //----- CONTRAINTS -----
     static constraints = {
-        produto(nullable:true)
-        valorUnitario(nullable:false,editable:false)   //PUXA VALOR DO PRODUTO
-        quantidade(nullable:false)
+        produto(nullable:false)
+        valorUnitario(nullable:false)   //PUXA VALOR DO PRODUTO
+        quantidade(nullable:false,min:0.0)
         desconto(nullable:true)
-        valorTotalItem(nullable:false, validator:{val, obj-> val>0}) //SETADO PELO CONTROLLER
+        valorTotalItem(nullable:false, min:0.0) //SETADO PELO CONTROLLER
     }
 
     // ------- SETTERS E GETTERS -------

@@ -12,3 +12,6 @@
 </div>
 
 <%-- VALOR TOTAL --%>
+<div id="div-valor-total" >
+    <g:render template="valorTotal" />
+</div>

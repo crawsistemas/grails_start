@@ -19,11 +19,17 @@
     background: #648CCC;
 }
 
-#login-div{
-    display:inline;
+#login-div form{
     width: 30%;
-    margin: 0 35%;
-    border: 2px solid #686868;
-    padding: 10px;
-    border-radius: 10px;
+    margin: 30px 35%;
 }
+
+#loginHeader {
+    float: right;
+    color: #fff;
+    }
+
+#loginHeader p{
+    font-size: 18px;
+    }
+

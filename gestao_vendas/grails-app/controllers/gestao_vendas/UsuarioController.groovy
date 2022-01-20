@@ -7,6 +7,7 @@ class UsuarioController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         [usuarioList: Usuario.list(params), usuarioTotal: Usuario.count()]
@@ -119,6 +120,28 @@ class UsuarioController {
         catch (DataIntegrityViolationException e) {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
             redirect(action: "edit", id: id)
+        }
+    }
+
+    def login(){
+
+    }
+
+    def logout(){
+        session.user = null
+        redirect(action:"login")
+    }
+
+    def autenticar(){
+        def user = Usuario.findByUsuarioAndSenha(params.usuario,params.senha)
+
+        if(user){
+            session.user = user
+            flash.message = "Olá ${user.usuario}"
+            redirect(uri:"#")
+        }else{
+            flash.message = "Desculpe ${params.usuario}. Por favor tente denovo."
+            redirect(action:"login")
         }
     }
 }

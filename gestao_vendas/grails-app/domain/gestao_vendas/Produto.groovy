@@ -10,7 +10,7 @@ class Produto {
 
     //----- CONTRAINTS -----
     static constraints = {
-        nome(nullable:false)
+        nome(nullable:false,maxSize:255)
         valorPadrao(nullable:true)
     }
 

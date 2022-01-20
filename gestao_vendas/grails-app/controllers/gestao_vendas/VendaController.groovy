@@ -73,6 +73,7 @@ class VendaController {
 
     def update(Long id, Long version) {
         def venda = Venda.get(id)
+        println id
         if (!venda) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'venda.label', default: 'Venda'), id])
             redirect(action: "index")
@@ -120,19 +121,21 @@ class VendaController {
     }
 
     def adicionarItem(){
+        
         def venda = new Venda(params)
         
         if (venda.itensVenda==null)
             venda.itensVenda = []
 
         venda.itensVenda.add(new VendaItem())
+
         render(template:"itensVenda", model:[venda:venda])
     }
 
     def removerItem(int indice){
         def venda = new Venda(params)
-        
-        venda.itensVenda.removeAt(indice)
+
+        venda.itensVenda.remove(indice)
         render(template:"itensVenda", model:[venda:venda])   
     }
 
@@ -141,21 +144,24 @@ class VendaController {
 
         def valorUnitario = venda.itensVenda.get(indice).produto.valorPadrao
         def quantidade = venda.itensVenda.get(indice).quantidade
-        if(!quantidade) quantidade = 1
         def desconto = venda.itensVenda.get(indice).desconto
-        if (!desconto) desconto = 0
-        def valorTotalItem = valorUnitario*quantidade - desconto
+        
         venda.itensVenda.get(indice).valorUnitario = valorUnitario
-        venda.itensVenda.get(indice).quantidade = quantidade
-        venda.itensVenda.get(indice).desconto = desconto
-        venda.itensVenda.get(indice).valorTotalItem = valorTotalItem
+        venda.itensVenda.get(indice).valorTotalItem = valorUnitario*quantidade - desconto
 
         def valorTotal = 0
         venda.itensVenda.each{valorTotal = valorTotal + it.valorTotalItem}
         venda.valorTotal = valorTotal
 
-
-        render(template:"itensVenda", model:[venda:venda])
+        render(template:"itensVenda", model:[venda:venda,attValorTotal:true])
     }
-    
+
+    def atualizarValorTotal(){
+        def venda = new Venda(params)
+        println params
+        venda.valorTotal = new BigDecimal(params.get("aux"))
+
+        render(template:"valorTotal",model:[venda:venda])
+    }
+
 }
